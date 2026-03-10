@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Fix: Use 'main' branch explicitly
                 git branch: 'main', 
                     url: 'https://github.com/Rishireddy9/jenkins-practice.git'
             }
@@ -25,14 +24,6 @@ pipeline {
     post {
         always {
             archiveArtifacts artifacts: '*.html', allowEmptyArchive: true
-            publishHTML([
-                allowMissing: true,
-                alwaysLinkToLastBuild: true,
-                keepAll: true,
-                reportDir: '.',
-                reportFiles: 'test.html',
-                reportName: 'Test Report'
-            ])
         }
     }
 }
