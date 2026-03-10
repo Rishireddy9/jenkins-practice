@@ -1,6 +1,6 @@
 echo "Running build"
 date
-i love you rishi
-i love you so much
-priya love you
-welcome back
+echo "i love you rishi"
+echo "i love you so much"
+echo "priya love you"
+echo "welcome back"
